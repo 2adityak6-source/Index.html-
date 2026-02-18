@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>होलिका दहन की शुभकामनाएँ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;700&family=Yantraavarta:wght@900&display=swap" rel="stylesheet">
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3763195707163360" crossorigin="anonymous"></script>
+
+    <style>
+        :root {
+            --fire: #ff4500;
+            --gold: #ffcc00;
+            --wa: #25D366;
+            --orange: #ff8c00;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Hind', sans-serif;
+            background: radial-gradient(circle at center, #1b2735 0%, #090a0f 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .wish-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            padding: 25px;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .name-display {
+            font-family: 'Yantraavarta', sans-serif;
+            color: var(--gold);
+            font-size: 2.5rem;
+            margin: 10px 0;
+            text-shadow: 0 0 15px var(--fire);
+        }
+
+        /* सीधी अग्नि एनिमेशन */
+        .fire-stage {
+            height: 160px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            margin: 20px 0;
+        }
+
+        .flame {
+            width: 50px;
+            height: 90px;
+            background: linear-gradient(to top, var(--fire), var(--orange), var(--gold));
+            border-radius: 50% 50% 20% 20% / 60% 60% 40% 40%;
+            position: relative;
+            display: none;
+            animation: burnStraight 0.6s infinite alternate;
+            box-shadow: 0 -10px 30px var(--fire);
+        }
+
+        @keyframes burnStraight {
+            0% { transform: scaleY(1) scaleX(1); }
+            100% { transform: scaleY(1.1) scaleX(0.9); opacity: 0.9; }
+        }
+
+        .wood-logs {
+            width: 110px; height: 25px;
+            background: #4e342e;
+            position: absolute;
+            bottom: 0;
+            border-radius: 5px;
+        }
+
+        /* बटन और इनपुट - Z-index के साथ ताकि क्लिक काम करे */
+        .input-box {
+            width: 85%; padding: 12px; border-radius: 30px; border: 2px solid var(--gold);
+            background: white; color: black; text-align: center; font-size: 1.1rem; 
+            margin-bottom: 15px; position: relative; z-index: 10;
+        }
+
+        .action-btn {
+            padding: 14px 20px; border-radius: 30px; border: none; font-weight: bold;
+            cursor: pointer; font-size: 1.1rem; text-decoration: none; display: inline-block;
+            transition: 0.3s; width: 90%; position: relative; z-index: 10;
+        }
+
+        .fire-btn { background: linear-gradient(45deg, #ff416c, #ff4b2b); color: white; margin-bottom: 10px; }
+        
+        .whatsapp-btn { 
+            background-color: var(--wa); color: white; display: none; 
+            margin-top: 15px; animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+
+        .ad-slot { margin: 15px 0; width: 100%; text-align: center; min-height: 50px; }
+    </style>
+</head>
+<body>
+
+    <div class="ad-slot">
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:320px;height:50px"
+             data-ad-client="ca-pub-3763195707163360"
+             data-ad-slot="YOUR_AD_SLOT_ID"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <div class="wish-card">
+        <p>आपको शुभकामनाएँ भेजी हैं</p>
+        <h1 id="userName" class="name-display">किसी खास ने</h1>
+        
+        <div class="fire-stage">
+            <div id="mainFlame" class="flame"></div>
+            <div class="wood-logs"></div>
+        </div>
+
+        <h2 style="color: var(--gold);">शुभ होलिका दहन!</h2>
+        <button class="fire-btn action-btn" onclick="ignite()">🔥 अग्नि प्रज्वलित करें</button>
+    </div>
+
+    <div class="wish-card" style="border: 2px dashed var(--gold);">
+        <h3>अपना लिंक यहाँ बनाएँ</h3>
+        <input type="text" id="nameInput" class="input-box" placeholder="आपका नाम लिखें...">
+        <button class="fire-btn action-btn" onclick="generate()">लिंक तैयार करें</button>
+        
+        <a id="waLink" href="#" class="whatsapp-btn action-btn" target="_blank">
+            WhatsApp पर शेयर करें 📱
+        </a>
+    </div>
+
+    <div class="ad-slot">
+        <script>
+            atOptions = { 'key' : '53d57a7e29ebb3fa3055c66d484b385e', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
+        </script>
+        <script src="https://www.highperformanceformat.com/53d57a7e29ebb3fa3055c66d484b385e/invoke.js"></script>
+    </div>
+
+    <script>
+        // URL से नाम लोड करना
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const n = urlParams.get('n');
+            if (n) {
+                document.getElementById('userName').innerText = decodeURIComponent(n);
+            }
+        };
+
+        function ignite() {
+            document.getElementById('mainFlame').style.display = 'block';
+        }
+
+        function generate() {
+            const inputName = document.getElementById('nameInput').value.trim();
+            if (!inputName) {
+                alert("कृपया अपना नाम लिखें!");
+                return;
+            }
+
+            // Vercel/GitHub URL को ऑटोमैटिक पकड़ने के लिए
+            const finalUrl = window.location.origin + window.location.pathname + "?n=" + encodeURIComponent(inputName);
+            const msg = `🔥 *होलिका दहन की शुभकामनाएँ!* 🔥\n\n*${inputName}* ने आपके लिए एक सरप्राइज भेजा है। यहाँ क्लिक करके देखें:\n\n👉 ${finalUrl}`;
+            
+            const waBtn = document.getElementById('waLink');
+            waBtn.href = "https://api.whatsapp.com/send?text=" + encodeURIComponent(msg);
+            waBtn.style.display = "inline-block";
+            
+            alert("आपका लिंक बन गया है! अब WhatsApp बटन पर क्लिक करें।");
+        }
+    </script>
+</body>
+</html>
+
